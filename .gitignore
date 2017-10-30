@@ -1,0 +1,7 @@
+*.dll
+/Components
+/lib
+/packages
+/*/obj
+/*/bin
+*.userprefs

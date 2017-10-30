@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0AAD7E65-FDD1-48B1-97D9-2789BB9F8456}</ProjectGuid>
+    <Description>Xamarin.iOS bindings for the Outbound messaging SDK</Description>
+    <PackageId>IO.Outbound.Sdk.iOS</PackageId>
+    <PackageVersion>1.0.3.3</PackageVersion>
+    <Authors>Mark Reynolds</Authors>
+    <DevelopmentDependency>false</DevelopmentDependency>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>IO.Outbound.Sdk.iOS</RootNamespace>
+    <UsePartialTypes>false</UsePartialTypes>
+    <AssemblyName>IO.Outbound.Sdk.iOS.NuGet</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Owners>Reynolds Software Engineering Group, Inc.</Owners>
+    <Copyright>Copyright © Reynolds Software Engineering Group, Inc.</Copyright>
+    <PackageProjectUrl>https://github.com/rsegtx/IO.Outbound.Sdk.iOS</PackageProjectUrl>
+    <Title>Outbound iOS SDK bindings</Title>
+    <PackageLicenseUrl>http://www.rseg.net/mit-license</PackageLicenseUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>..\IO.Outbound.Sdk.iOS.NuGet\bin\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\IO.Outbound.Sdk.iOS.NuGet\bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IO.Outbound.Sdk.iOS\IO.Outbound.Sdk.iOS.csproj">
+      <Project>{AF8FB716-4316-45A7-B0F8-053B9D50F9CF}</Project>
+      <Name>IO.Outbound.Sdk.iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGet.Build.Packaging">
+      <Version>0.1.276</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />
+</Project>
