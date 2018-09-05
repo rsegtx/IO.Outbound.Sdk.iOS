@@ -8,6 +8,4 @@ You can find details about use of the Android SDK on Zendesk's website:
 
 https://developer.zendesk.com/embeddables/docs/outbound/ios
 
-A NuGet package is also available:
-
-https://www.nuget.org/packages/IO.Outbound.Sdk.iOS
+This project is no longer supported as Zendesk has elminated their free developer accounts.
